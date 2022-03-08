@@ -1,6 +1,7 @@
 import 'package:first_flutter/pages/home_page.dart';
 import 'package:first_flutter/pages/login_page.dart';
 import 'package:first_flutter/utils/routes.dart';
+import 'package:first_flutter/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 void main(){
@@ -16,11 +17,8 @@ class MyApp extends StatelessWidget {
 
       //home:HomePage(),//remove cause for routes
       themeMode: ThemeMode.light,//for change theme page
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,//for change status and app bar color
-         //primaryTextTheme: GoogleFonts.latoTextTheme()
-         fontFamily: GoogleFonts.lato().fontFamily
-      ),
+      theme: MYTheme.lightTheme(context),
+       highContrastDarkTheme: MYTheme.darkTheme(context),
        debugShowCheckedModeBanner: false,//remove debug icon
 
       darkTheme: ThemeData(
